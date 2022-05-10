@@ -46,8 +46,8 @@ public class Main {
 //        citas.create(cita);
 
 //Acceder al expediente del habitante
-//        JSONObject habitanteJSON = new JSONObject(habitante);
-//        System.out.println(habitanteJSON);
+        JSONObject habitanteJSON = new JSONObject(habitante);
+        System.out.println(habitanteJSON);
 //        System.out.println(habitanteJSON.get("idhabitante"));
 //        JSONObject expedienteJSON = (JSONObject) habitanteJSON.get("idExpediente");
 //        System.out.println(expedienteJSON.get("informacionGeneral"));
