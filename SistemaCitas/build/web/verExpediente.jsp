@@ -32,17 +32,14 @@
                 <div class="card-body">
                     <h1>Consultar Expediente</h1>   
                     <br>
-                    <form method="POST" action="expedienteHabitante" >
+                    
+                    <form action="expedienteHabitante"  class="nss" id="nss" method="post" >
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">Numero de Seguridad Social:</span>
                         <input type="text" class="txt" id="nss" name="nss" placeholder="Ej. 5553321343" required="">
                     </div>
-                    
-                    
                         <input type="submit" class="btn btn-primary" value = "Aceptar"/>
                     </form>
-
-
                 </div>
             </div>
         </div>
