@@ -24,10 +24,10 @@
                     <p>Ingresa tu usuario y contraseña para iniciar sesión.</p>
                     <hr>
                     <label for="uname"><b>Nombre de Usuario</b></label>
-                    <input type="text" class="txt" id="txtUsuario" name="txtUsuario" placeholder="Nombre de Usuario" required="">
+                    <input type="text" class="txt" id="txtUsuario" name="txtUsuario" placeholder="Nombre de Usuario" required="" value="admin">
                     <br/><br/>
                     <label for="psw"><b>Contraseña</b></label>
-                    <input type="password" class="txt" id="txtUContrasena"  name="txtUContrasena" placeholder="Contraseña" required="">
+                    <input type="password" class="txt" id="txtUContrasena"  name="txtUContrasena" placeholder="Contraseña" required="" value="admin">
 
                 </div>
             </form>
