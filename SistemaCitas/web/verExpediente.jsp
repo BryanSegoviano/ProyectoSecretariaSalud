@@ -32,10 +32,10 @@
                 <div class="card-body">
                     <h1>Consultar Expediente</h1>   
                     <br>
-                    <form method="POST" action="expedienteHabitante">
+                    <form method="POST" action="expedienteHabitante" >
                     <div class="input-group input-group-sm mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-sm">Numero de Seguridad Social:</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" id="nss" name="nss" aria-describedby="inputGroup-sizing-sm">
+                        <input type="text" class="txt" id="nss" name="nss" placeholder="Ej. 5553321343" required="">
                     </div>
                     
                     

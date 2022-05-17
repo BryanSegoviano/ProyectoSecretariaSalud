@@ -30,24 +30,14 @@
                     <a class="navbar-brand" style="color:white">Secretaria de Salud</a>
                 </div>
                 <ul class="nav navbar-nav">
-<<<<<<< HEAD
                     <li><a href="menuPrincipal.jsp" style="color:white">Inicio</a></li>
                     <li><a href="registrarCita.jsp" style="color:white">Registrar Cita</a></li>
-                    <li><a href="#" style="color:white">Ver expediente</a></li>
+                    <li><a href="verExpediente.jsp" style="color:white">Ver expediente</a></li>
                     <li><a href="consultarCitas.jsp" style="color:white">Consultar todas las citas</a></li>
                     <li><a href="consultarExpedientes.jsp" style="color:white">Consultar todos los expedientes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
-=======
-                    <li><a href="inicio.html" style="color:white">Inicio</a></li>
-                    <li><a href="registrarCita.html" style="color:white">Registrar Cita</a></li>
-                    <li><a href="ConsultarCitas.html" style="color:white">Consultar Cita</a></li>
-                    <li><a href="#" style="color:white">Consultar Expediente</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
->>>>>>> 1506f7f70d44dca835008608244f0ca0b54c3aec
                 </ul>
             </div>
         </nav>

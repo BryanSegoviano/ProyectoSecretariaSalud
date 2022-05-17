@@ -18,7 +18,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="menuPrincipal.jsp" style="color:white">Inicio</a></li>
                     <li><a href="registrarCita.jsp" style="color:white">Registrar Cita</a></li>
-                    <li><a href="#" style="color:white">Ver expediente</a></li>
+                    <li><a href="verExpediente.jsp" style="color:white">Ver expediente</a></li>
                     <li><a href="consultarCitas.jsp" style="color:white">Consultar todas las citas</a></li>
                     <li><a href="consultarExpedientes.jsp" style="color:white">Consultar todos los expedientes</a></li>
                 </ul>

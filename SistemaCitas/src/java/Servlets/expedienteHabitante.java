@@ -35,7 +35,7 @@ public class expedienteHabitante extends HttpServlet {
         } else {
             out.println("<script type=\"text/javascript\">");
             out.println("alert('Error: habitante no encontrado.');");
-            out.println("location='home.jsp';");
+            out.println("location='verExpediente.jsp';");
             out.println("</script>");
         }
     }

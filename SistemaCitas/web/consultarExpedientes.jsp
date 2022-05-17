@@ -9,7 +9,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-inverse">
+        <<nav class="navbar navbar-inverse">
             <div class="container-fluid" style="background-color:#9f2043">
                 <div class="navbar-header">
                     <a class="navbar-brand" style="color:white">Secretaria de Salud</a>
@@ -17,7 +17,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="menuPrincipal.jsp" style="color:white">Inicio</a></li>
                     <li><a href="registrarCita.jsp" style="color:white">Registrar Cita</a></li>
-                    <li><a href="#" style="color:white">Ver expediente</a></li>
+                    <li><a href="verExpediente.jsp" style="color:white">Ver expediente</a></li>
                     <li><a href="consultarCitas.jsp" style="color:white">Consultar todas las citas</a></li>
                     <li><a href="consultarExpedientes.jsp" style="color:white">Consultar todos los expedientes</a></li>
                 </ul>
