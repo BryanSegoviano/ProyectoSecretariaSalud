@@ -2,8 +2,8 @@
 
 IMPORTANTE:
 
-Primero habra el sistema de Expedientes.
+Primero abra el sistema de Expedientes.
 
-Despues habra el sistema de citas.
+Despues abra el sistema de citas.
 
 E incluir Bases de datos.
