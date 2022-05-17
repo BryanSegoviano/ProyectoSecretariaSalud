@@ -24,7 +24,8 @@ public class expedienteHabitante extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         ConsultaHabitante consultaHabitante = new ConsultaHabitante();
-        String nss = (String) request.getAttribute("identificadorHabitante");
+        String nss = (String) request.getAttribute("nss");
+        System.out.println("-> " + nss);
         Habitante habitante = consultaHabitante.obtenerHabitantePorID(nss);
         System.out.println(habitante);
         if (habitante != null) {

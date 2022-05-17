@@ -8,6 +8,10 @@
         <servlet-name>expedienteHabitante</servlet-name>
         <servlet-class>Servlets.expedienteHabitante</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>expedienteIndividual</servlet-name>
+        <servlet-class>Servlets.expedienteIndividual</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GuardarCitaServlet</servlet-name>
         <url-pattern>/GuardarCita</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>expedienteHabitante</servlet-name>
         <url-pattern>/expedienteHabitante</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>expedienteIndividual</servlet-name>
+        <url-pattern>/expedienteIndividual</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

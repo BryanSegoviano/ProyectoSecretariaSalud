@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Cita.findAll", query = "SELECT c FROM Cita c"),
     @NamedQuery(name = "Cita.findByIdcita", query = "SELECT c FROM Cita c WHERE c.idcita = :idcita"),
-    @NamedQuery(name = "Cita.findByIddoctor", query = "SELECT c FROM Cita c WHERE c.iddoctor = :iddoctor"),
+    @NamedQuery(name = "Cita.findByDoctor", query = "SELECT c FROM Cita c WHERE c.doctor = :doctor"),
     @NamedQuery(name = "Cita.findByNsshabitante", query = "SELECT c FROM Cita c WHERE c.nsshabitante = :nsshabitante"),
     @NamedQuery(name = "Cita.findByFecha", query = "SELECT c FROM Cita c WHERE c.fecha = :fecha")})
 public class Cita implements Serializable {
@@ -42,8 +42,8 @@ public class Cita implements Serializable {
     @Column(name = "idcita")
     private Integer idcita;
     @Basic(optional = false)
-    @Column(name = "iddoctor")
-    private int iddoctor;
+    @Column(name = "doctor")
+    private String doctor;
     @Basic(optional = false)
     @Column(name = "nsshabitante")
     private String nsshabitante;
@@ -59,15 +59,15 @@ public class Cita implements Serializable {
         this.idcita = idcita;
     }
 
-    public Cita(int iddoctor, String nsshabitante, Date fecha) {
-        this.iddoctor = iddoctor;
+    public Cita(String doctor, String nsshabitante, Date fecha) {
+        this.doctor = doctor;
         this.nsshabitante = nsshabitante;
         this.fecha = fecha;
     }
-    
-    public Cita(Integer idcita, int iddoctor, String nsshabitante, Date fecha) {
+
+    public Cita(Integer idcita, String doctor, String nsshabitante, Date fecha) {
         this.idcita = idcita;
-        this.iddoctor = iddoctor;
+        this.doctor = doctor;
         this.nsshabitante = nsshabitante;
         this.fecha = fecha;
     }
@@ -80,12 +80,12 @@ public class Cita implements Serializable {
         this.idcita = idcita;
     }
 
-    public int getIddoctor() {
-        return iddoctor;
+    public String getDoctor() {
+        return doctor;
     }
 
-    public void setIddoctor(int iddoctor) {
-        this.iddoctor = iddoctor;
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
     }
 
     public String getNsshabitante() {
@@ -126,7 +126,7 @@ public class Cita implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.Cita[ idcita=" + idcita + " ]";
+        return "Cita{" + "idcita=" + idcita + ", doctor=" + doctor + ", nsshabitante=" + nsshabitante + ", fecha=" + fecha + '}';
     }
-    
+
 }

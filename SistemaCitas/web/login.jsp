@@ -1,9 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : 21/04/2022, 05:48:58 PM
-    Author     : l3tal
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -38,8 +32,8 @@
                 </div>
             </form>
             <br/>
-            <form method="POST" action="home.jsp">
-                <input type="submit" value="Iniciar Sesion" id="boton"/>
+            <form method="POST" action="menuPrincipal.jsp">
+                <input type="submit" value="Iniciar Sesion" id="boton"/> 
             </form>
             <br/>
             <img src="img/bannerabajo.png" alt="gobiernomex" width="1200">

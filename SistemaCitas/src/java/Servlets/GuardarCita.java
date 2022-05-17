@@ -44,7 +44,7 @@ public class GuardarCita extends HttpServlet {
             String citaid = (String) request.getAttribute("identificadorHabitante");
             Habitante habitante = consultaHabitante.obtenerHabitantePorID(citaid);
             
-            Cita cita = new Cita(Integer.parseInt(identificadorDoctor), identificadorHabitante, fechaHora);
+            Cita cita = new Cita(identificadorDoctor, identificadorHabitante, fechaHora);
             citasDao.create(cita);
             out.println("<script type=\"text/javascript\">");
             out.println("alert('La cita se ha registrado correctamente');");
