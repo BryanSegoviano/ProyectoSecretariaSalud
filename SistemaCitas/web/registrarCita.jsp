@@ -30,13 +30,13 @@
         <br><br>
         <form method="post" action="registrarCita">
             <div class="text-center">
-                <h2>Registrar Cita</h2>
+                <h2><b>Registrar Cita</b></h2>
                 <img src="img/calendario.png" width="10%" alt="calendario"/>
                 <br>
-                <h3>Ingrese el Número de Seguro Social del habitante</h3>
+                <h3>Ingrese el Número de Seguro Social del habitante al que desea asignarle una cita.</h3>
                 <br>
                 <p>
-                    <input type="text" name="nss" id="nss">
+                    <input type="text" name="nss" id="nss" placeholder="Ingrese el NSS">
                 </p>
                 <br/>
                 <p>

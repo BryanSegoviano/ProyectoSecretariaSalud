@@ -34,10 +34,10 @@
                 <h2>Ver Expediente</h2>
                 <img src="img/expediente.png" width="10%" alt="calendario"/>
                 <br>
-                <h3>Ingrese el Número de Seguro Social del habitante</h3>
+                <h3>Ingrese el Número de Seguro Social del habitante del que desea ver el expediente.</h3>
                 <br>
                 <p>
-                    <input type="text" name="nss" id="nss">
+                    <input type="text" name="nss" id="nss" placeholder="Ingrese el NSS">
                 </p>
                 <br/>
                 <p>

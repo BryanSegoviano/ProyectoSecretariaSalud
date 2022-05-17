@@ -40,39 +40,45 @@
                 </ul>
             </div>
         </nav>
-        <div>
-            <h3 style="margin-left:30px">Informacion del Habitante</p>
-                <br>
-                <form style="margin-left:30px" method="POST" action="GuardarCita">
-                    <div>
-                        <label for="NSS">Número de Seguro Social</label>
-                        <input type="text" name="numsocial" id="numsocial" value="${habitanteCita.getNss()}" readonly>
-                        <br><br/>
-                        <p>
-                            <label for="Nombre">Nombre del Habitante:</label>
-                            <input type="text" name="Nombre" id="Nombre" value="${habitanteCita.getNombre()}" readonly>    
-                            <label for="Dirección">Direccion:</label>
-                            <input type="text" name="Direccion" id="Direccion" value="${habitanteCita.getDireccion()}" readonly>
-                            <label for="Edad">Edad:</label>
-                            <input type="number" name="${habitanteCita.getEdad()}" id="Edad" value="34" readonly >
-                        </p>
-                        <br>
-                        <p>
-                            <label for="doc">Doctor:</label>
-                            <input type="text" name="doc" id="doc" readonly  value="${habitanteCita.getDoctor()}">
-                            <label for="consultorio">Consultorio:</label>
-                            <input type="text" name="consultorio" id="consultorio" readonly  value="${habitanteCita.getConsultorio()}">
-                        </p>
-                        <br>
-                        <label for="hora y fecha">Fecha y Hora:</label>
-                        <input type="datetime-local" name="fecha" id="fecha">
+        <div class="text-center">
+            <h2 style="margin-left:30px"><b>Registrar cita</b></h2>
+            <br>
+            <h3 style="margin-left:30px">Datos del habitante</h3>
+            <br/>
+            <form style="margin-left:30px" method="POST" action="GuardarCita">
+                <div>
+                    <label for="NSS">Número de Seguro Social</label>
+                    <input type="text" name="numsocial" id="numsocial" value="${habitanteCita.getNss()}" readonly>
+                    <br><br/>
+                    <p>
+                        <label for="Nombre">Nombre del Habitante:</label>
+                        <input type="text" name="Nombre" id="Nombre" value="${habitanteCita.getNombre()}" readonly>    
+                        <label for="Dirección">Direccion:</label>
+                        <input type="text" name="Direccion" id="Direccion" value="${habitanteCita.getDireccion()}" readonly>
+                        <label for="Edad">Edad:</label>
+                        <input type="number" name="${habitanteCita.getEdad()}" id="Edad" value="34" readonly >
+                    </p>
+                    <br>
+                    <br/>
+                    <p>
+                        <label for="doc">Doctor:</label>
+                        <input type="text" name="doc" id="doc" readonly  value="${habitanteCita.getDoctor()}">
+                        <label for="consultorio">Consultorio:</label>
+                        <input type="text" name="consultorio" id="consultorio" readonly  value="${habitanteCita.getConsultorio()}">
+                    </p>
+                    <br>
+                    <hr/>
+                    <label>*Debe seleccionar una fecha y hora para la cita.</label>
 
-                        <br>
-                        <p style="text-align:center">
-                            <input type="submit" name="Registrar" id="Registrar" value="Registrar cita">
-                        </p>
-                    </div>
-                </form>
+                    <br/><br/>
+                    <label for="hora y fecha">Fecha y Hora:</label>
+                    <input type="datetime-local" name="fecha" id="fecha" required="Debe seleccionar la fecha y hora de la cita">
+                    <br><br/>
+                    <p style="text-align:center">
+                        <input type="submit" name="Registrar" id="Registrar" value="Registrar cita">
+                    </p>
+                </div>
+            </form>
         </div>
     </body>
 </html>

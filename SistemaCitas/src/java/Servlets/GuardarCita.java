@@ -40,7 +40,7 @@ public class GuardarCita extends HttpServlet {
             System.out.println(cita);
             citasDao.create(cita);
             out.println("<script type=\"text/javascript\">");
-            out.println("alert('Cita registrada correctamente. La información de la cita se envio por correo electronico al habitante.');");
+            out.println("alert('Cita registrada correctamente. La información de la cita se envió por correo electrónico al habitante.');");
             out.println("location='menuPrincipal.jsp';");
             out.println("</script>");
         } catch (Exception ex) {

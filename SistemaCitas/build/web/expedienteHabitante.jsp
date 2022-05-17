@@ -65,10 +65,8 @@
                         + "</div></div>"
                 );
             %>           
-            <div class="m-5 pb-5 bg-info">
-                <h1 id="end">.</h1>   
-            </div>
         </div>
-        <br/>              
+        <br/>  
+        <img src="img/bannerabajo.png" alt="gobiernomex" width="1900">
     </body>
 </html>
