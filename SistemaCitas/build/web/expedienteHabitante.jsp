@@ -1,5 +1,3 @@
-
-
 <%@page import="java.util.Arrays"%>
 <%@page import="dominio.Expediente"%>
 <%@page import="dominio.Habitante"%>
@@ -14,12 +12,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Consultar Expediente</title>
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <nav class="navbar navbar-inverse">
@@ -35,37 +32,43 @@
                     <li><a href="consultarExpedientes.jsp" style="color:white">Consultar todos los expedientes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+                    <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
                 </ul>
             </div>
         </nav>
-        <h1 id="titulo">Expediente del habitante</h1>             
-        <%
-            out.print(
-                    "<div id=\"divIzquierda\" class=\"caja1\">"
-                    + "<h2>NSS: " + habitante.getNss() + "</h2>"
-                    + "<div id=\"divDaosPersonales\"><br/>"
-                    + "<img src=\"data:image/png;base64," + habitante.getDatoBiometricoConversion() + "\" width=\"100\"  height=\"100\" /> <br/>"
-                    + "<label><b>Nombre:</b> "
-                    + habitante.getNombre()
-                    + "</label><br/><br/>"
-                    + "<label><b>Direccion:</b> "
-                    + habitante.getDireccion()
-                    + "</label><br/><br/>"
-                    + "<label><b>Edad:</b> "
-                    + habitante.getEdad()
-                    + "</label><br/><br/>"
-                    + "<label><b>Imagenes:</b></label> <br/> <br/>"
-                    + "<img src=\"data:image/png;base64," + expediente.getImagenes() + "\" width=\"200\"  height=\"200\" />"
-                    + "<br/><label><b>Documentos:</b></label> <br/> <br/>"
-                    + "<img src=\"data:image/png;base64," + expediente.getDocumento() + "\" width=\"200\"  height=\"200\" />"
-                    + "<br/><br/><label><b>Informacion general del habitante: </b>"
-                    + expediente.getInformacionGeneral()
-                    + "</label><br/><br/>"
-                    + "<button id=\"botonHabitante\" onclick=\"location.href = 'index.html'\">Terminar registro</button>"
-                    + "</div></div>"
-            );
-        %>           
+        <div class="text-center">
+            <div class="m-5 pb-5 bg-info">
+                <h1 id="titulo">Expediente del habitante</h1>   
+            </div>
+            <%
+                out.print(
+                        "<div id=\"divIzquierda\" class=\"caja1\">"
+                        + "<h2>NSS: " + habitante.getNss() + "</h2>"
+                        + "<div id=\"divDaosPersonales\"><br/>"
+                        + "<img src=\"data:image/png;base64," + habitante.getDatoBiometricoConversion() + "\" width=\"100\"  height=\"100\" /> <br/>"
+                        + "<label><b>Nombre:</b> "
+                        + habitante.getNombre()
+                        + "</label><br/><br/>"
+                        + "<label><b>Direccion:</b> "
+                        + habitante.getDireccion()
+                        + "</label><br/><br/>"
+                        + "<label><b>Edad:</b> "
+                        + habitante.getEdad()
+                        + "</label><br/><br/>"
+                        + "<label><b>Imagenes:</b></label> <br/> <br/>"
+                        + "<img src=\"data:image/png;base64," + expediente.getImagenes() + "\" width=\"200\"  height=\"200\" />"
+                        + "<br/><label><b>Documentos:</b></label> <br/> <br/>"
+                        + "<img src=\"data:image/png;base64," + expediente.getDocumento() + "\" width=\"200\"  height=\"200\" />"
+                        + "<br/><br/><label><b>Informacion general del habitante: </b>"
+                        + expediente.getInformacionGeneral()
+                        + "</label><br/><br/>"
+                        + "</div></div>"
+                );
+            %>           
+            <div class="m-5 pb-5 bg-info">
+                <h1 id="end">.</h1>   
+            </div>
+        </div>
         <br/>              
     </body>
 </html>

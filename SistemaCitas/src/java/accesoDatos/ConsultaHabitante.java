@@ -13,7 +13,7 @@ public class ConsultaHabitante {
     private String servidor = "http://localhost:8080/";
     private String peticion = "habitantes/";
 
-    public Habitante obtenerHabitantePorID(String nssHabitante) {
+    public Habitante obtenerHabitantePorNSS(String nssHabitante) {
         Habitante habitante = null;
         String habitanteExpediente;
         try {
@@ -51,8 +51,8 @@ public class ConsultaHabitante {
                 String documentos = (String) expedienteJSON.get("documento");
                 Expediente expediente = new Expediente(idExpediente, imagenes, informacionGeneral, documentos);
                 habitante = new Habitante(idHabitante, nombre, direccion, edad, idTutor, expediente, datoBiometrico, nss, doctor, consultorio);
-
                 return habitante;
+                
             } else {
                 return null;
             }

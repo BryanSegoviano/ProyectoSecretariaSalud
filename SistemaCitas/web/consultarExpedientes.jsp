@@ -9,7 +9,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <<nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid" style="background-color:#9f2043">
                 <div class="navbar-header">
                     <a class="navbar-brand" style="color:white">Secretaria de Salud</a>
@@ -22,13 +22,13 @@
                     <li><a href="consultarExpedientes.jsp" style="color:white">Consultar todos los expedientes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+                    <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
                 </ul>
             </div>
         </nav>
-        
+
         <iframe src="http://localhost:8080/consultaExpediente" width="100%" height="850" style="border:none;"></iframe>
-        
+
         <img src="img/bannerabajo.png" alt="gobiernomex" width="1900">
     </body>
 </html>

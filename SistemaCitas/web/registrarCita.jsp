@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title>Registrar Cita</title>
         <meta charset="utf-8">
@@ -23,24 +23,27 @@
                     <li><a href="consultarExpedientes.jsp" style="color:white">Consultar todos los expedientes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+                    <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
                 </ul>
             </div>
         </nav>
-        <div>
-            <h2 style="text-align:center">Registrar Cita</h2>
-            <br>
-            <h3 style="text-align:center">Ingrese el Número de Seguro Social del habitante</h3>
-            <br>
-            <p style="text-align:center">
-                <input type="text" name="nss" id="nss">
-            </p>
-            <br/>
-            <p style="text-align:center">
-                <input type="submit" name="Buscar" id="Buscar" value="Buscar habitante">
-            </p>
-            
-        </div>
-        
+        <br><br>
+        <form method="post" action="registrarCita">
+            <div class="text-center">
+                <h2>Registrar Cita</h2>
+                <img src="img/calendario.png" width="10%" alt="calendario"/>
+                <br>
+                <h3>Ingrese el Número de Seguro Social del habitante</h3>
+                <br>
+                <p>
+                    <input type="text" name="nss" id="nss">
+                </p>
+                <br/>
+                <p>
+                    <input type="submit" name="Buscar" id="Buscar" value="Buscar habitante">
+                </p>
+
+            </div>
+        </form>
     </body>
 </html>

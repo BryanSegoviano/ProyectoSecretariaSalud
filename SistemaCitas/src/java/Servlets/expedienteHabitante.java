@@ -24,20 +24,23 @@ public class expedienteHabitante extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         ConsultaHabitante consultaHabitante = new ConsultaHabitante();
-        String nss = (String) request.getAttribute("nss");
+        String nss = request.getParameter("nss");
         System.out.println("-> " + nss);
-        Habitante habitante = consultaHabitante.obtenerHabitantePorID(nss);
+
+        Habitante habitante = consultaHabitante.obtenerHabitantePorNSS(nss);
         System.out.println(habitante);
-        if (habitante != null) {
-            HttpSession session = request.getSession();
-            session.setAttribute("habitante", habitante);
-            response.sendRedirect("expedienteHabitante.jsp");
-        } else {
-            out.println("<script type=\"text/javascript\">");
-            out.println("alert('Error: habitante no encontrado.');");
-            out.println("location='verExpediente.jsp';");
-            out.println("</script>");
-        }
+
+//        if (habitante != null) {
+        HttpSession session = request.getSession();
+        session.setAttribute("habitante", habitante);
+        response.sendRedirect("expedienteHabitante.jsp");
+//        } else {
+//            out.println("<script type=\"text/javascript\">");
+//            out.println("alert('Error: habitante no encontrado.');");
+//            out.println("location='home.jsp';");
+//            out.println("</script>");
+//        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

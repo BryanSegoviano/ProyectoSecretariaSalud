@@ -1,9 +1,3 @@
-<%-- 
-    Document   : home
-    Created on : 7/05/2022, 08:15:05 PM
-    Author     : l3tal
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

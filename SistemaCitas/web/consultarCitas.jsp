@@ -36,31 +36,29 @@
                     <li><a href="consultarCitas.jsp" style="color:white">Consultar todas las citas</a></li>
                     <li><a href="consultarExpedientes.jsp" style="color:white">Consultar todos los expedientes</a></li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+                <ul class="nav navbar-nav navbar-right">                  
+                    <li><a href="index.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Cerrar sesión</a></li>                  
                 </ul>
             </div>
         </nav>
 
-        <div class="col-sm-8">
-            <table class="table table-hover">
+        <div class="col-sm-8 table table-responsive">
+            <table class="table table-hover table-bordered table-striped text-center" >
                 <thead>
                     <tr>
-                        <th>Nombre del doctor</th>
-                        <th>NSS del habitante</th>
-                        <th>Fecha de la cita</th>
-
+                        <th class="text-center">Nombre del doctor</th>
+                        <th class="text-center">NSS del habitante</th>
+                        <th class="text-center">Fecha de la cita</th>
                     </tr>
                 </thead>
                 <tbody>
-
                     <%
                         for (Cita listaCita : listaCitas) {
                             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
                             String fechaConversion = sdf.format(listaCita.getFecha());
                             out.print(
                                     "<tr>"
-                                    + "<td>" + listaCita.getDoctor()+ "</td>"
+                                    + "<td>" + listaCita.getDoctor() + "</td>"
                                     + "<td>" + listaCita.getNsshabitante() + "</td>"
                                     + "<td>" + fechaConversion + "</td>"
                                     + "</tr>"
@@ -70,10 +68,6 @@
                     %>
                 </tbody>
             </table>
-
-
-
-
         </div>   
 
     </div>

@@ -7,8 +7,6 @@ import dominio.Habitante;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.servlet.RequestDispatcher;
@@ -24,38 +22,27 @@ public class GuardarCita extends HttpServlet {
         try {
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
-
+            
             EntityManagerFactory et = Persistence.createEntityManagerFactory("SistemaCitasPU");
             CitaJpaController citasDao = new CitaJpaController(et);
 
-            String identificadorDoctor = request.getParameter("identificadorDoctor");
-            String identificadorHabitante = request.getParameter("identificadorHabitante");
+            String doctor = request.getParameter("doc");
+            String habitantenss = request.getParameter("numsocial");
+            System.out.println("-> " + doctor);
+            System.out.println("-> " + habitantenss);
             
             String fechaString = request.getParameter("fecha");
             String fechaConversion = fechaString + ":00";
             System.out.println(fechaConversion);
-            Timestamp fechaHora = Timestamp.valueOf(fechaConversion.replace("T"," "));          
+            Timestamp fechaHora = Timestamp.valueOf(fechaConversion.replace("T"," "));                   
             
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<body>");
-
-            ConsultaHabitante consultaHabitante = new ConsultaHabitante();
-            String citaid = (String) request.getAttribute("identificadorHabitante");
-            Habitante habitante = consultaHabitante.obtenerHabitantePorID(citaid);
-            
-            Cita cita = new Cita(identificadorDoctor, identificadorHabitante, fechaHora);
+            Cita cita = new Cita(doctor, habitantenss, fechaHora);
+            System.out.println(cita);
             citasDao.create(cita);
             out.println("<script type=\"text/javascript\">");
-            out.println("alert('La cita se ha registrado correctamente');");
+            out.println("alert('Cita registrada correctamente. La información de la cita se envio por correo electronico al habitante.');");
+            out.println("location='menuPrincipal.jsp';");
             out.println("</script>");
-
-            request.setAttribute("identificadorHabitante", identificadorHabitante);
-            RequestDispatcher rd = request.getRequestDispatcher("expedienteHabitante");
-            rd.forward(request, response);
-
-            out.println("</body>");
-            out.println("</html>");
         } catch (Exception ex) {
             System.out.println(ex);
         }
